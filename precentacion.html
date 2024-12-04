@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ferrari - Innovación en Autos Deportivos. Descubre nuestra historia, modelos y tecnología.">
+    <title>Ferrari - Velocidad y Exclusividad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ferrari.css">
+</head>
+<body>
+
+  <main>
+<div class="slider">
+<div class="slides">
+<div class="slide active">
+    <img class="presentacion" src="imagenes/grandes/presentacion1.jpg" alt="presentacion">
+</div>
+<div class="slide">
+    <img class="presentacion" src="imagenes/grandes/presentacion2.jpg" alt="presentacion">
+</div>
+<div class="slide">
+    <img class="presentacion" src="imagenes/grandes/presentacion3.jpg" alt="presentacion">
+</div>
+<div class="slide">
+    <img class="presentacion" src="imagenes/grandes/presentacion4.jpg" alt="presentacion">
+</div>
+</div>
+<button class="prev" onclick="moveSlide(-1)" id="anterior">&#10094;</button>
+<button class="next" onclick="moveSlide(1)" id="siguiente">&#10095;</button>
+</div>
+
+
+
+<footer>
+<div class="cajacontenedora">
+<a href="https://vicente-crypto.github.io/100-VICENTE-SASTRE-ferrari.final/">Ferrari Oficial</a>
+</div>
+</footer>
+
+<script type="text/javascript">
+    const diapositivas = document.querySelectorAll('.slide');
+    let diapositivaActual = 0;
+    const tiempoTransicion = 10000; // Tiempo en milisegundos entre diapositivas
+
+    function cambiarDiapositiva(n) {
+      diapositivas[diapositivaActual].classList.remove('activa');
+      diapositivaActual = (diapositivaActual + n + diapositivas.length) % diapositivas.length;
+      diapositivas[diapositivaActual].classList.add('activa');
+    }
+
+    const botonAnterior = document.getElementById('anterior');
+    botonAnterior.addEventListener('click', () => {
+      cambiarDiapositiva(-1);
+    });
+
+    const botonSiguiente = document.getElementById('siguiente');
+    botonSiguiente.addEventListener('click', () => {
+      cambiarDiapositiva(1);
+    });
+
+    // Temporizador automático
+    setInterval(() => {
+      cambiarDiapositiva(1);
+    }, tiempoTransicion);
+</script>
+
+</body>
+</html>

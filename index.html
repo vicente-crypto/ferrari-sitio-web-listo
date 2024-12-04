@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ferrari - Innovación en Autos Deportivos. Descubre nuestra historia, modelos y tecnología.">
+    <title>Ferrari - Velocidad y Exclusividad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ferrari.css">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.5;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-bottom: 2px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header.hidden {
+            transform: translateY(-100%);
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #d70000;
+            font-weight: bold;
+        }
+
+        h1 a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.5rem;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .modelo {
+            margin-bottom: 20px;
+        }
+
+        .cajapublicidad iframe {
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .logo img {
+                width: 120px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            h1 a {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+
+            .modelo img {
+                max-width: 100%;
+            }
+
+            section {
+                margin-bottom: 30px;
+            }
+
+            .redes-sociales img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            h1 a {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            .modelo img {
+                max-width: 100%;
+            }
+
+            .redes-sociales img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagenes/grandes/logoferrari.png" alt="Logo de Ferrari" loading="lazy">
+        </div>
+        <h1><a href="galeria.html" title="Ir a la galería">Ferrari: Innovación en Autos Deportivos</a></h1>
+        <div class="contacto">
+            <a href="contacto.html" title="Contáctanos">Contáctanos</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#sobre-nosotros" aria-label="Ir a la sección Sobre Ferrari">Sobre Ferrari</a></li>
+            <li><a href="galeria.html" aria-label="Ver la galería de Ferrari">Galería</a></li>
+            <li><a href="#modelos" aria-label="Ir a la sección Modelos">Modelos</a></li>
+            <li><a href="#tecnologia" aria-label="Ir a la sección Tecnología">Tecnología</a></li>
+            <li><a href="#contacto" aria-label="Ir a la sección Contacto">Contacto</a></li>
+            <li><a href="precentacion.html">Presentación</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="sobre-nosotros">
+            <h2>Sobre Ferrari</h2>
+            <p>Ferrari es sinónimo de lujo, velocidad y excelencia en ingeniería automovilística...</p>
+            <a href="historia.html" title="Descubre la historia de Ferrari">
+                <img src="imagenes/grandes/blancoynegro.jpg" alt="Historia de Ferrari en blanco y negro" loading="lazy">
+            </a>
+        </section>
+
+        <section id="modelos">
+            <h2>Modelos Destacados</h2>
+            <div class="modelo">
+                <img src="imagenes/grandes/ferrarisf90stradale.jpg" alt="Ferrari SF90 Stradale - Superdeportivo híbrido" loading="lazy">
+                <h3><a href="sf90.html">Ferrari SF90 Stradale</a></h3>
+                <p>Un superdeportivo híbrido con 1000 CV...</p>
+            </div>
+            <div class="modelo">
+                <img src="imagenes/grandes/ferrariroma.jpg" alt="Ferrari Roma - Elegancia y potencia" loading="lazy">
+                <h3><a href="roma.html">Ferrari Roma</a></h3>
+                <p>Elegancia y potencia se combinan en este modelo...</p>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Si deseas más información sobre nuestros vehículos...</p>
+            <div class="redes-sociales">
+                <h3>Síguenos en</h3>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="imagenes/grandes/ig.png" alt="Icono de Instagram" loading="lazy">
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
